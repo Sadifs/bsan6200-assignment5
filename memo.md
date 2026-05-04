@@ -9,8 +9,6 @@
 
 ## Executive Summary
 
-> *(To be completed after project implementation and evaluation)*
-
 ---
 
 ## Problem Statement
@@ -21,30 +19,25 @@ Recruiters and hiring managers often need to quickly assess a candidate's fit ac
 
 ## Technical Approach
 
-> *(To be completed — describe RAG pipeline, chunking strategy, model choices)*
 
 ---
 
 ## Key Findings
 
-> *(To be completed after evaluation)*
 
 ---
 
 ## Prompt Engineering Insights
 
-> *(To be completed — describe 3+ iterations, before/after comparison, measurable improvement)*
 
 ---
 
 ## Failure Analysis
 
-> *(To be completed — describe failure patterns, root causes, and improvements)*
 
 ---
 
 ## Conclusion
 
-> *(To be completed)*
 
 ---
