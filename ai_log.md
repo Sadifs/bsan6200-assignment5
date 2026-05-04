@@ -2,32 +2,16 @@
 
 **Project:** Ask My Resume RAG Chatbot (Option A)
 **Author:** Sadaf Sarbazi
-
----
-
-## Log Entries
-
-| # | Date | Tool | What I Asked | What It Suggested | What I Used / Modified |
-|---|------|------|--------------|-------------------|------------------------|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-| 7 | | | | | |
-| 8 | | | | | |
-
 ---
 
 ## Detailed Entries
 
 ### Entry 1 — [Date]
-**Tool:** Claude Code
-**Prompt:** [What I asked]
-**AI Suggestion:** [What it suggested]
-**What I Used:** [What I actually used and why]
-**Modified:** [What I changed from the suggestion]
+**Tool:**
+**Prompt:**
+**AI Suggestion:**
+**What I Used:**
+**Modified:**
 
 ---
 
