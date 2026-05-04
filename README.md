@@ -1,6 +1,7 @@
 # Ask My Resume — RAG Chatbot (Option A)
 
 **BSAN 6200: Text Mining & Social Media Analytics — Spring 2026**
+
 **Author:** Sadaf Sarbazi
 
 ---
@@ -15,7 +16,7 @@ A Retrieval-Augmented Generation (RAG) chatbot that answers questions about my p
 
 ### Prerequisites
 - Python 3.10+
-- An OpenAI API key (or free alternative — see below)
+- An OpenAI API key (or alternative — see below)
 
 ### Install dependencies
 ```bash
