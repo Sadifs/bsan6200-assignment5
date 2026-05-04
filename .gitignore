@@ -38,3 +38,9 @@ faiss_index/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Personal career documents (kept local for privacy)
+data/*.pdf
+data/*.docx
+data/*.txt
+data/*.md
