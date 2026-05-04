@@ -16,30 +16,30 @@
 ## Prompt Iteration Results
 
 ### Iteration 1 — Baseline Prompt
-**Prompt:** [Paste prompt]
-**Sample Output:** [Paste output]
-**Issues:** [What was wrong]
+**Prompt:** 
+**Sample Output:** 
+**Improvement:** 
 
 ### Iteration 2
-**Prompt:** [Paste prompt]
-**Sample Output:** [Paste output]
-**Improvement:** [Measurable improvement]
+**Prompt:** 
+**Sample Output:** 
+**Improvement:** 
 
 ### Iteration 3
-**Prompt:** [Paste prompt]
-**Sample Output:** [Paste output]
-**Improvement:** [Measurable improvement]
+**Prompt:** 
+**Sample Output:** 
+**Improvement:** 
 
 ---
 
 ## Failure Analysis
 
 ### Failure Pattern 1: [Name]
-**Query:** [Query that failed]
-**Retrieved chunks:** [What was retrieved]
-**LLM output:** [What the LLM said]
-**Root cause:** [Why it failed]
-**Fix applied:** [What was done to address it]
+**Query:**
+**Retrieved chunks:**
+**LLM output:**
+**Root cause:**
+**Fix applied:**
 
 ### Failure Pattern 2: [Name]
 **Query:**
