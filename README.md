@@ -6,17 +6,23 @@
 
 ---
 
-## 1. Project Description
+## 1. Project Title and Option
 
-A Retrieval-Augmented Generation (RAG) chatbot that answers questions about my professional background using my personal career documents (resume, LinkedIn profile, GitHub portfolio, and personal bio). Users can ask natural-language questions like "What experience do you have in data analytics?" and receive grounded, accurate answers pulled directly from source documents.
+**Option A — "Ask My Resume" RAG Chatbot**
 
 ---
 
-## 2. Setup Instructions
+## 2. Project Description
+
+A Retrieval-Augmented Generation (RAG) chatbot that answers questions about my professional background using personal career documents (resume, statement of qualifications, LinkedIn profile, and project write-ups). Users can ask natural-language questions like "What experience do you have in data analytics?" and receive grounded, accurate answers pulled directly from source documents.
+
+---
+
+## 3. Setup Instructions
 
 ### Prerequisites
 - Python 3.10+
-- An OpenAI API key (or alternative — see below)
+- A free HuggingFace account and API token ([huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)) — enable "Make calls to Inference Providers"
 
 ### Install dependencies
 ```bash
@@ -26,8 +32,11 @@ pip install -r requirements.txt
 ### Configure API key
 Create a `.env` file in the root directory:
 ```
-OPENAI_API_KEY=your_key_here
+HF_TOKEN=hf_your_token_here
 ```
+
+### Add your documents
+Place `.pdf` or `.txt` career documents in the `data/` folder (minimum 3–5 files).
 
 ### Run the Streamlit app
 ```bash
@@ -39,49 +48,50 @@ Open `notebooks/rag_pipeline.ipynb` in Jupyter and run all cells top-to-bottom.
 
 ---
 
-## 3. Models & Tools Used
+## 4. Models & Tools Used
 
 | Component | Tool / Model |
 |---|---|
-| LLM | GPT-4o-mini (OpenAI) |
-| Embeddings | text-embedding-3-small (OpenAI) |
-| Vector Store | FAISS |
-| RAG Framework | LangChain |
+| LLM | HuggingFaceH4/zephyr-7b-beta (via HuggingFace Inference API) |
+| Embeddings | sentence-transformers/all-MiniLM-L6-v2 (local, free) |
+| Vector Store | ChromaDB |
 | UI | Streamlit |
-| Document Loader | PyPDF, LangChain loaders |
+| Document Loader | PyPDF |
 
 ---
 
-## 4. Paid vs. Free Path
+## 5. Paid vs. Free Path
 
-- **Paid path used:** OpenAI API (~$1–3 estimated total cost)
-- **Free alternative:** Replace OpenAI embeddings with `sentence-transformers/all-MiniLM-L6-v2` and LLM with a HuggingFace Inference API model or local Ollama (`llama3`)
+- **Free path used:** HuggingFace Inference API (free tier) for LLM; `sentence-transformers` for local embeddings — no credit card required
+- **Paid alternative:** Replace with OpenAI `gpt-4o-mini` + `text-embedding-3-small` for higher throughput and quality
 
 ---
 
-## 5. Key Findings
+## 6. Key Findings
+
+> *(To be completed after evaluation — see `evaluation/test_results.md`)*
 
 - Chunking strategy comparison: fixed-size vs. sentence-aware splitting
-- Retrieval accuracy on standard vs. edge-case queries
+- Retrieval accuracy across factual, inference, out-of-scope, and specificity queries
 - Prompt iteration results and measurable improvements
 
 ---
 
-## 6. File Descriptions
+## 7. File Descriptions
 
 | File / Folder | Description |
 |---|---|
 | `streamlit_app.py` | Main Streamlit chat application |
 | `notebooks/rag_pipeline.ipynb` | Full RAG pipeline: loading, chunking, embedding, retrieval, evaluation |
-| `data/` | Personal career documents (resume, LinkedIn, GitHub, bio) |
+| `data/` | Personal career documents (local only — excluded from version control) |
 | `evaluation/test_results.md` | Evaluation results: retrieval accuracy, prompt iterations, failure analysis |
-| `memo.md` | Business memo summarizing findings |
-| `ai_log.md` | AI usage log (8+ entries) |
+| `memo.md` | Business memo summarizing findings for a technical manager audience |
+| `ai_log.md` | AI usage log (8+ entries documenting tool use with progression) |
 | `requirements.txt` | Python dependencies |
-| `.gitignore` | Files excluded from version control |
+| `.gitignore` | Files excluded from version control (includes all personal documents) |
 
 ---
 
-## 7. Repository
+## 8. Repository
 
 [github.com/Sadifs/bsan6200-assignment5](https://github.com/Sadifs/bsan6200-assignment5)
