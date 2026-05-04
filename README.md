@@ -61,8 +61,6 @@ Open `notebooks/rag_pipeline.ipynb` in Jupyter and run all cells top-to-bottom.
 
 ## 5. Key Findings
 
-> *(To be filled in after evaluation — see `evaluation/test_results.md`)*
-
 - Chunking strategy comparison: fixed-size vs. sentence-aware splitting
 - Retrieval accuracy on standard vs. edge-case queries
 - Prompt iteration results and measurable improvements
