@@ -7,22 +7,9 @@
 
 ## Test Query Set
 
-| # | Query | Expected Answer (Ground Truth) | Retrieved Chunks Relevant? | LLM Answer | Score (1–5) | Notes |
-|---|-------|-------------------------------|---------------------------|------------|-------------|-------|
-| 1 | | | | | | |
-| 2 | | | | | | |
-| 3 | | | | | | |
-| 4 | | | | | | |
-| 5 | | | | | | |
-
 ---
 
 ## Chunking Strategy Comparison
-
-| Strategy | Chunk Size | Overlap | Retrieval Accuracy | Notes |
-|----------|------------|---------|-------------------|-------|
-| Fixed-size | | | | |
-| Sentence-aware | | | | |
 
 ---
 
@@ -65,10 +52,5 @@
 
 ## Top-k Tuning Results
 
-| k value | Precision | Recall | Notes |
-|---------|-----------|--------|-------|
-| 1 | | | |
-| 3 | | | |
-| 5 | | | |
 
 ---
