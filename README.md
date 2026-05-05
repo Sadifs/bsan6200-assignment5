@@ -52,7 +52,7 @@ Open `notebooks/rag_pipeline.ipynb` in Jupyter and run all cells top-to-bottom.
 
 | Component | Tool / Model |
 |---|---|
-| LLM | HuggingFaceH4/zephyr-7b-beta (via HuggingFace Inference API) |
+| LLM | Qwen/Qwen2.5-7B-Instruct (via HuggingFace Inference API) |
 | Embeddings | sentence-transformers/all-MiniLM-L6-v2 (local, free) |
 | Vector Store | ChromaDB |
 | UI | Streamlit |
