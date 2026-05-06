@@ -83,23 +83,25 @@ def ask_llm(hf_client, prompt):
 # in your notebook and justified your choice.
 # ══════════════════════════════════════════
 
-def chunk_documents(documents):
-    """
-    TODO: Implement your chunking strategy here.
-
-    Input: list of dicts [{"text": "...", "source": "filename.txt"}, ...]
-    Output: list of dicts [{"text": "chunk text", "source": "filename.txt"}, ...]
-
-    Example (replace with your actual implementation):
-        chunks = []
-        for doc in documents:
-            # your chunking logic here
-            chunks.append({"text": doc["text"], "source": doc["source"]})
-        return chunks
-    """
-    # PLACEHOLDER: no chunking, each doc is one chunk
-    # Replace this with your actual chunking strategy
-    return documents
+def chunk_documents(documents, max_chunk=600, overlap=80):
+    """Paragraph-aware chunking: split on blank lines, cap long paragraphs."""
+    chunks = []
+    for doc in documents:
+        paragraphs = re.split(r'\n\s*\n', doc['text'])
+        current = ''
+        for para in paragraphs:
+            para = para.strip()
+            if not para:
+                continue
+            if len(current) + len(para) + 1 <= max_chunk:
+                current = (current + '\n' + para).strip()
+            else:
+                if current:
+                    chunks.append({'text': current, 'source': doc['source']})
+                current = (current[-overlap:] + '\n' + para).strip() if current else para
+        if current:
+            chunks.append({'text': current, 'source': doc['source']})
+    return chunks
 
 
 # ══════════════════════════════════════════
