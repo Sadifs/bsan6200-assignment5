@@ -1,26 +1,8 @@
 # AI Usage Log — BSAN 6200 Assignment 5
 
-**Project:** Ask My Resume RAG Chatbot (Option A)
-**Author:** Sadaf Sarbazi
-
 ---
 
-## Summary Table
-
-| # | Date | Tool | What I Asked | What I Used | What I Modified |
-|---|------|------|-------------|-------------|-----------------|
-| 1 | 2026-05-04 | Claude Code | Set up repo structure and required files | Scaffold files (README, .gitignore, requirements.txt, ai_log, memo, evaluation) | Updated README sections to match assignment spec exactly |
-| 2 | 2026-05-04 | Claude Code | Which HuggingFace model to use for free-tier LLM | Suggested zephyr-7b-beta | Switched to Qwen/Qwen2.5-7B-Instruct after zephyr failed with 400 error |
-| 3 | 2026-05-04 | Claude Code | Build document loading and chunking pipeline | PyPDF + two chunking strategies (fixed-size and paragraph-aware) | Kept paragraph-aware after comparing chunk counts: 26 vs 64 chunks |
-| 4 | 2026-05-04 | Claude Code | Build ChromaDB vector store with sentence-transformers | SentenceTransformerEmbeddingFunction with all-MiniLM-L6-v2 | Used as-is — verified with similarity search queries |
-| 5 | 2026-05-04 | Claude Code | Build retrieval chain connecting vector store to LLM | rag_query() function with retrieve + ask_llm | Adjusted max_tokens from 150 to 300 for more complete answers |
-| 6 | 2026-05-06 | Claude Code | Implement chunking function in streamlit_app.py | Copied chunk_paragraph from notebook | Used as-is — matches the strategy chosen in notebook |
-| 7 | [Date] | Claude Code | [Your prompt engineering session — fill in] | [What it suggested] | [What you changed] |
-| 8 | [Date] | [Tool] | [Case where your approach beat the AI — fill in] | [What AI suggested] | **Why your approach was better:** [explain] |
-
----
-
-## Detailed Entries
+## Entries
 
 ### Entry 1 — 2026-05-04
 **Tool:** Claude Code
