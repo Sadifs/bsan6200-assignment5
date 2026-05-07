@@ -6,9 +6,13 @@
 
 ### Entry 1 — 2026-05-04
 **Tool:** Claude Code
+
 **Prompt:** Set up repo structure with all required files for Option A
+
 **AI Suggestion:** Created README.md, .gitignore, requirements.txt, ai_log.md, memo.md, evaluation/test_results.md with scaffold content
+
 **What I Used:** All scaffold files
+
 **Modified:** Revised README to include all 8 required sections per assignment spec; updated .gitignore to explicitly exclude data/*.pdf and data/*.txt for privacy
 
 ---
