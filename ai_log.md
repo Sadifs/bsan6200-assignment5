@@ -1,4 +1,5 @@
 # AI Usage Log — BSAN 6200 Assignment 5
+
 **Tool:** Claude Code
 ---
 
