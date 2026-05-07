@@ -59,7 +59,7 @@ Two main failure patterns were identified:
 
 **Incomplete skill coverage:** Programming language coverage (Q2) was incomplete because skills are spread across multiple document sections. With k=3, not all relevant chunks were retrieved. Increasing k to 5 would likely surface the full skills list.
 
-Both issues point to the same fix: increasing k from 3 to 5 and potentially adding a dedicated structured skills/education summary document to the data folder.
+Both issues point to the same fix: increasing k from 3 to 5 and adding a dedicated structured summary document to the data folder. The latter was implemented — `data/about.txt` was added to the repository with explicit education and skills sections, directly addressing Q1 retrieval gaps for the deployed version of the app.
 
 ---
 

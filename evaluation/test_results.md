@@ -61,14 +61,14 @@
 **Retrieved chunks:** Resume.pdf, CV.pdf — but degree section not captured in top chunks
 **LLM output:** "I don't have that information in my documents."
 **Root cause:** Degree information is embedded in header/summary sections that get merged with other content in paragraph-aware chunking, reducing retrieval precision for that specific fact.
-**Fix applied:** Adding a dedicated bio or education summary document to `data/` would improve factual retrieval for basic profile questions.
+**Fix implemented:** Added `data/about.txt` — a structured career summary with a dedicated education section — which directly addresses this retrieval gap for the deployed app.
 
 ### Failure Pattern 2: Incomplete Language Coverage
 **Query:** What programming languages does this person know?
 **Retrieved chunks:** Resume.pdf, github_projects.txt
 **LLM output:** Only mentioned Python and Jupyter — missed SQL, R, Tableau listed in CV
 **Root cause:** CV chunks containing the full skills list ranked lower than Resume chunks for this query.
-**Fix applied:** Increasing k from 3 to 5 would retrieve more chunks and capture the full skills list.
+**Fix implemented:** `data/about.txt` consolidates all skills into a single section, reducing fragmentation. Increasing k from 3 to 5 would further improve coverage across source documents.
 
 ---
 

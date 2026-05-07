@@ -36,7 +36,7 @@ HF_TOKEN=hf_your_token_here
 ```
 
 ### Add your documents
-Place `.pdf` or `.txt` career documents in the `data/` folder (minimum 3–5 files).
+A public career summary (`data/about.txt`) is already included and powers the live demo. To enrich answers, add additional `.pdf` or `.txt` career documents to the `data/` folder — or use the sidebar file uploader in the running app.
 
 ### Run the Streamlit app
 ```bash
