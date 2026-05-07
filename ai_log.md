@@ -87,6 +87,18 @@
 
 ---
 
+### Entry 9 — 2026-05-06
+
+**Prompt:** Fix chromadb import error on Streamlit Cloud (TypeError in opentelemetry/protobuf chain)
+
+**AI Suggestion:** Pin protobuf<5.0.0 to resolve the version conflict
+
+**What I Used:** Removed chromadb entirely; replaced with numpy cosine similarity over sentence-transformers embeddings
+
+**Modified:** The protobuf pin didn't fix the issue because Streamlit Cloud was running Python 3.14, which breaks protobuf's C extension metaclass regardless of version. Replacing chromadb with a lightweight numpy dot-product search eliminated the entire opentelemetry/protobuf dependency chain. This was a better solution than fighting version constraints — simpler code, no external vector store dependency, works on any Python version, and produces identical retrieval results since the same embedding model is used.
+
+---
+
 ### Entry 8 *(Case where my approach beat AI suggestion)*
 
 **Prompt:** What LLM should I use for the HuggingFace Inference API free path?

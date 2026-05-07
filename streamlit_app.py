@@ -176,10 +176,10 @@ with st.sidebar:
     st.write("This chatbot answers questions about my professional background using RAG.")
 
     uploaded_files = st.file_uploader(
-        "Upload career documents (PDF or TXT)",
+        "Add documents (optional)",
         type=["pdf", "txt"],
         accept_multiple_files=True,
-        help="Upload your resume, CV, SOQ, or any other career documents.",
+        help="Supplement the default profile with additional documents (resume, CV, SOQ, etc.).",
     )
     st.divider()
     st.write(f"**Model:** {MODEL_ID}")
@@ -201,11 +201,6 @@ if uploaded_files:
             raw_docs.append({"text": text, "source": uf.name})
 
     all_chunks = chunk_documents(raw_docs)
-
-    @st.cache_resource
-    def build_index_from_uploaded(file_key):
-        return None  # placeholder; real build below
-
     model = SentenceTransformer(EMBED_MODEL)
     texts = [c["text"] for c in all_chunks]
     embs = model.encode(texts, show_progress_bar=False, normalize_embeddings=True)
@@ -230,9 +225,9 @@ else:
 # ── Sample questions ──
 st.write("**Try a sample question:**")
 samples = [
-    "What technical skills does this person have?",
-    "Describe a project this person has worked on.",
-    "What type of role is this person best suited for?",
+    "What is this person's environmental science background?",
+    "Describe the Paris Agreement climate classifier project.",
+    "What data and analytics skills does this person have?",
 ]
 cols = st.columns(len(samples))
 for i, q in enumerate(samples):

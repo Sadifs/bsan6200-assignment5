@@ -21,15 +21,15 @@ Recruiters and hiring managers often need to quickly assess a candidate's fit ac
 
 ## Technical Approach
 
-Four career documents were loaded using PyPDF and plain-text readers: a resume, CV, statement of qualifications, and a GitHub portfolio summary. Documents were split using a paragraph-aware chunking strategy (26 chunks, avg 866 characters), which preserves semantic units like resume sections and project descriptions better than fixed-size splitting (which produced 64 fragmented chunks at 377 characters each). Chunks were embedded using `sentence-transformers/all-MiniLM-L6-v2` (local, free) and stored in a ChromaDB vector store. At query time, the top-3 most relevant chunks are retrieved and passed with the user's question to `Qwen/Qwen2.5-7B-Instruct` via the HuggingFace Inference API. The full pipeline is surfaced through a Streamlit chat interface.
+Four career documents were loaded using PyPDF and plain-text readers: a resume, CV, statement of qualifications, and a GitHub portfolio summary. Documents were split using a paragraph-aware chunking strategy (26 chunks, avg 866 characters), which preserves semantic units like resume sections and project descriptions better than fixed-size splitting (which produced 64 fragmented chunks at 377 characters each). Chunks were embedded using `sentence-transformers/all-MiniLM-L6-v2` (local, free) and stored as a NumPy matrix. At query time, cosine similarity search retrieves the top-3 most relevant chunks, which are passed with the user's question to `Qwen/Qwen2.5-7B-Instruct` via the HuggingFace Inference API. The full pipeline is surfaced through a Streamlit chat interface deployed on Streamlit Cloud.
 
 | Component | Tool |
 |---|---|
 | LLM | Qwen/Qwen2.5-7B-Instruct (HuggingFace Inference API) |
 | Embeddings | sentence-transformers/all-MiniLM-L6-v2 (local, free) |
-| Vector Store | ChromaDB |
+| Vector Store | NumPy cosine similarity |
 | Document Loader | PyPDF |
-| UI | Streamlit |
+| UI | Streamlit (deployed on Streamlit Cloud) |
 
 ---
 

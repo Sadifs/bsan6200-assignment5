@@ -14,7 +14,7 @@
 
 ## 2. Project Description
 
-A Retrieval-Augmented Generation (RAG) chatbot that answers questions about my professional background using personal career documents (resume, statement of qualifications, LinkedIn profile, and project write-ups). Users can ask natural-language questions like "What experience do you have in data analytics?" and receive grounded, accurate answers pulled directly from source documents.
+A Retrieval-Augmented Generation (RAG) chatbot that answers questions about my professional background using personal career documents (resume, CV, statement of qualifications, and project write-ups). Users can ask natural-language questions like "What is this person's environmental science background?" and receive grounded, accurate answers pulled directly from source documents. Deployed live on Streamlit Cloud.
 
 ---
 
@@ -82,7 +82,8 @@ Open `notebooks/rag_pipeline.ipynb` in Jupyter and run all cells top-to-bottom.
 |---|---|
 | `streamlit_app.py` | Main Streamlit chat application |
 | `notebooks/rag_pipeline.ipynb` | Full RAG pipeline: loading, chunking, embedding, retrieval, evaluation |
-| `data/` | Personal career documents (local only — excluded from version control) |
+| `data/about.txt` | Public career summary (committed) — powers the live Streamlit demo |
+| `data/` | Personal career documents (PDF/TXT — excluded from version control for privacy) |
 | `evaluation/test_results.md` | Evaluation results: retrieval accuracy, prompt iterations, failure analysis |
 | `memo.md` | Business memo summarizing findings for a technical manager audience |
 | `ai_log.md` | AI usage log (8+ entries documenting tool use with progression) |
