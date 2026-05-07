@@ -225,9 +225,9 @@ else:
 # ── Sample questions ──
 st.write("**Try a sample question:**")
 samples = [
-    "What makes this person's background unique for climate or sustainability roles?",
-    "Describe the Paris Agreement climate classifier and its key findings.",
-    "What types of roles is this person targeting and why?",
+    "What is this person's educational background?",
+    "What technical skills and tools does this person have?",
+    "What projects has this person worked on?",
 ]
 cols = st.columns(len(samples))
 for i, q in enumerate(samples):
