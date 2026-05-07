@@ -160,7 +160,6 @@ Answer:"""
 # UI
 # ══════════════════════════════════════════
 
-chunks, embeddings, embed_model, raw_docs = load_index()
 hf_client = load_llm()
 
 st.title("📄 Ask My Resume")
@@ -171,22 +170,62 @@ if not hf_client:
     st.error("HF_TOKEN not found. Add it to your .env file.")
     st.stop()
 
-if chunks is None:
-    st.error("No documents found in data/ folder. Add your resume and other files there.")
-    st.stop()
-
 # ── Sidebar ──
 with st.sidebar:
     st.header("About")
     st.write("This chatbot answers questions about my professional background using RAG.")
-    st.write(f"**Documents loaded:** {len(raw_docs)}")
-    for d in raw_docs:
-        st.write(f"- {d['source']}")
+
+    uploaded_files = st.file_uploader(
+        "Upload career documents (PDF or TXT)",
+        type=["pdf", "txt"],
+        accept_multiple_files=True,
+        help="Upload your resume, CV, SOQ, or any other career documents.",
+    )
     st.divider()
-    st.write(f"**Chunks in vector store:** {len(chunks)}")
     st.write(f"**Model:** {MODEL_ID}")
     st.divider()
     st.caption("BSAN 6200 | Assignment 5 | Option A")
+
+# ── Load documents ──
+# Prefer uploaded files; fall back to local data/ folder
+if uploaded_files:
+    raw_docs = []
+    for uf in uploaded_files:
+        if uf.name.endswith(".pdf"):
+            from pypdf import PdfReader
+            reader = PdfReader(uf)
+            text = "\n".join(page.extract_text() or "" for page in reader.pages)
+        else:
+            text = uf.read().decode("utf-8")
+        if text.strip():
+            raw_docs.append({"text": text, "source": uf.name})
+
+    all_chunks = chunk_documents(raw_docs)
+
+    @st.cache_resource
+    def build_index_from_uploaded(file_key):
+        return None  # placeholder; real build below
+
+    model = SentenceTransformer(EMBED_MODEL)
+    texts = [c["text"] for c in all_chunks]
+    embs = model.encode(texts, show_progress_bar=False, normalize_embeddings=True)
+    chunks, embeddings, embed_model = all_chunks, embs, model
+
+    with st.sidebar:
+        st.write(f"**Documents loaded:** {len(raw_docs)}")
+        for d in raw_docs:
+            st.write(f"- {d['source']}")
+        st.write(f"**Chunks:** {len(chunks)}")
+else:
+    chunks, embeddings, embed_model, raw_docs = load_index()
+    if chunks is None:
+        st.info("Upload your career documents in the sidebar to get started.")
+        st.stop()
+    with st.sidebar:
+        st.write(f"**Documents loaded:** {len(raw_docs)}")
+        for d in raw_docs:
+            st.write(f"- {d['source']}")
+        st.write(f"**Chunks:** {len(chunks)}")
 
 # ── Sample questions ──
 st.write("**Try a sample question:**")
