@@ -3,16 +3,11 @@ Assignment 5 -- Option A: "Ask My Resume" RAG Chatbot
 BSAN 6200 | Spring 2026
 
 Run with: python -m streamlit run streamlit_app.py
-
-YOUR TASKS (search for TODO):
-1. Load your documents from the data/ folder
-2. Implement your chunking strategy
-3. Write your system prompt (3+ iterations in notebook first)
-4. Add at least 3 sample questions relevant to YOUR documents
 """
 
 import streamlit as st
-import chromadb
+import numpy as np
+from sentence_transformers import SentenceTransformer
 from huggingface_hub import InferenceClient
 import os
 import re
@@ -24,6 +19,7 @@ st.set_page_config(page_title="Ask My Resume", page_icon="📄")
 
 # ── Config ──
 MODEL_ID = "Qwen/Qwen2.5-7B-Instruct"
+EMBED_MODEL = "all-MiniLM-L6-v2"
 
 
 # ══════════════════════════════════════════
@@ -31,20 +27,17 @@ MODEL_ID = "Qwen/Qwen2.5-7B-Instruct"
 # ══════════════════════════════════════════
 
 def load_text_file(filepath):
-    """Load a .txt file and return its content."""
     with open(filepath, "r", encoding="utf-8") as f:
         return f.read()
 
 
 def load_pdf_file(filepath):
-    """Load a .pdf file and return its text content."""
     from pypdf import PdfReader
     reader = PdfReader(filepath)
     return "\n".join(page.extract_text() or "" for page in reader.pages)
 
 
 def load_all_documents(data_dir="data"):
-    """Load all .txt and .pdf files from the data directory."""
     docs = []
     if not os.path.exists(data_dir):
         return docs
@@ -62,7 +55,6 @@ def load_all_documents(data_dir="data"):
 
 
 def ask_llm(hf_client, prompt):
-    """Send a prompt to the LLM and return the response."""
     response = hf_client.chat_completion(
         model=MODEL_ID,
         messages=[{"role": "user", "content": prompt}],
@@ -77,10 +69,7 @@ def ask_llm(hf_client, prompt):
 
 
 # ══════════════════════════════════════════
-# TODO 1: Chunking strategy
-# Implement your chosen chunking function.
-# You should have compared 2+ strategies
-# in your notebook and justified your choice.
+# Chunking strategy (paragraph-aware)
 # ══════════════════════════════════════════
 
 def chunk_documents(documents, max_chunk=600, overlap=80):
@@ -105,9 +94,7 @@ def chunk_documents(documents, max_chunk=600, overlap=80):
 
 
 # ══════════════════════════════════════════
-# TODO 2: System prompt
-# Design your prompt. Must have 3+ iterations
-# documented in your notebook.
+# System prompt (v3 — final)
 # ══════════════════════════════════════════
 
 SYSTEM_PROMPT = """You are a professional career chatbot representing Sadaf Sarbazi, designed for recruiters and hiring managers. Answer questions about her experience, skills, education, and projects using only the provided context — do not draw on outside knowledge. If the answer is not in the documents, say: 'I don't have that information in my documents.' Keep responses concise, professional, and in complete sentences."""
@@ -118,20 +105,17 @@ SYSTEM_PROMPT = """You are a professional career chatbot representing Sadaf Sarb
 # ══════════════════════════════════════════
 
 @st.cache_resource
-def load_vectorstore():
+def load_index():
+    """Embed all chunks and return (chunks, embeddings matrix, embed_model, documents)."""
     documents = load_all_documents("data")
     if not documents:
-        return None, []
+        return None, None, None, []
 
     chunks = chunk_documents(documents)
-    client = chromadb.Client()
-    collection = client.create_collection("resume_rag")
-    collection.add(
-        documents=[c["text"] for c in chunks],
-        metadatas=[{"source": c["source"]} for c in chunks],
-        ids=[f"chunk_{i}" for i in range(len(chunks))],
-    )
-    return collection, documents
+    model = SentenceTransformer(EMBED_MODEL)
+    texts = [c["text"] for c in chunks]
+    embeddings = model.encode(texts, show_progress_bar=False, normalize_embeddings=True)
+    return chunks, embeddings, model, documents
 
 
 @st.cache_resource
@@ -146,15 +130,17 @@ def load_llm():
 # RAG logic
 # ══════════════════════════════════════════
 
-def search(collection, query, k=3):
-    """Retrieve top-k chunks from the vector store."""
-    results = collection.query(query_texts=[query], n_results=k)
-    return results["documents"][0], [m["source"] for m in results["metadatas"][0]]
+def search(chunks, embeddings, model, query, k=3):
+    """Cosine similarity search over normalized embeddings."""
+    query_emb = model.encode([query], normalize_embeddings=True)
+    scores = (query_emb @ embeddings.T).flatten()
+    top_idx = np.argsort(scores)[::-1][:k]
+    return [chunks[i]["text"] for i in top_idx], [chunks[i]["source"] for i in top_idx]
 
 
-def ask_rag(collection, hf_client, question, k=3):
+def ask_rag(chunks, embeddings, embed_model, hf_client, question, k=3):
     """Full RAG pipeline: retrieve -> build prompt -> generate."""
-    docs, sources = search(collection, question, k=k)
+    docs, sources = search(chunks, embeddings, embed_model, question, k=k)
     context = "\n\n".join(docs)
 
     full_prompt = f"""{SYSTEM_PROMPT}
@@ -174,7 +160,7 @@ Answer:"""
 # UI
 # ══════════════════════════════════════════
 
-collection, raw_docs = load_vectorstore()
+chunks, embeddings, embed_model, raw_docs = load_index()
 hf_client = load_llm()
 
 st.title("📄 Ask My Resume")
@@ -185,7 +171,7 @@ if not hf_client:
     st.error("HF_TOKEN not found. Add it to your .env file.")
     st.stop()
 
-if collection is None:
+if chunks is None:
     st.error("No documents found in data/ folder. Add your resume and other files there.")
     st.stop()
 
@@ -197,13 +183,12 @@ with st.sidebar:
     for d in raw_docs:
         st.write(f"- {d['source']}")
     st.divider()
-    st.write(f"**Chunks in vector store:** {collection.count()}")
+    st.write(f"**Chunks in vector store:** {len(chunks)}")
     st.write(f"**Model:** {MODEL_ID}")
     st.divider()
     st.caption("BSAN 6200 | Assignment 5 | Option A")
 
-# ── TODO 3: Sample questions ──
-# Replace these with questions relevant to YOUR documents
+# ── Sample questions ──
 st.write("**Try a sample question:**")
 samples = [
     "What technical skills does this person have?",
@@ -238,7 +223,7 @@ if user_input:
 
     with st.chat_message("assistant"):
         try:
-            answer, sources, docs = ask_rag(collection, hf_client, user_input)
+            answer, sources, docs = ask_rag(chunks, embeddings, embed_model, hf_client, user_input)
 
             st.markdown(answer)
 
