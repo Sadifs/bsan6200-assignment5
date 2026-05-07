@@ -80,3 +80,12 @@
 **AI Suggestion:** Pin protobuf<5.0.0 to resolve the version conflict
 **What I Used:** Removed chromadb entirely; replaced with numpy cosine similarity over sentence-transformers embeddings
 **Modified:** The protobuf pin didn't fix the issue because Streamlit Cloud was running Python 3.14, which breaks protobuf's C extension metaclass regardless of version. Replacing chromadb with a lightweight numpy dot-product search eliminated the entire opentelemetry/protobuf dependency chain — simpler code, no external vector store dependency, works on any Python version, and produces identical retrieval results since the same embedding model is used.
+
+---
+
+### Entry 10 — 2026-05-07
+**Tool:** Claude Code, Cursor
+**Prompt:** Ongoing — structure, formatting, and editing assistance throughout the project
+**AI Suggestion:** Formatted markdown documents (README, memo, ai_log, evaluation results), cleaned code style and docstrings, suggested section headers and table layouts for the notebook and evaluation files, and edited prose for clarity and concision across documentation
+**What I Used:** Formatting and structural suggestions throughout; Cursor used for in-editor code edits and refactoring during development
+**Modified:** All substantive content decisions were my own — evaluation scores, failure analysis, prompt design rationale, and technical choices. AI was used to clean and structure the output of those decisions, not to make them. For example: I determined that paragraph-aware chunking was better; AI helped format the comparison table. I identified the two failure patterns; AI helped organize them into the structured failure analysis format used in evaluation/test_results.md and memo.md.
