@@ -58,12 +58,12 @@
 
 ---
 
-### Entry 7 — [Date]
-**Tool:** [Tool you used]
-**Prompt:** [What you asked during prompt engineering]
-**AI Suggestion:** [What it suggested — if anything]
-**What I Used:** [What you actually used]
-**Modified:** [What you changed from the suggestion]
+### Entry 7 — 2026-05-06
+**Tool:** Claude Code
+**Prompt:** Help me understand what my system prompt needs to do per assignment instructions
+**AI Suggestion:** Explained 5 elements: who the bot is, where answers come from, out-of-scope handling, tone, format — and suggested a v1→v2→v3 progression structure
+**What I Used:** Used the structural framework to write 3 iterations myself
+**Modified:** Provided my own content for each version; AI formatted/cleaned the language but the design decisions (what to include at each stage, what the grounding constraint should say) were mine
 
 ---
 

@@ -69,11 +69,10 @@ Open `notebooks/rag_pipeline.ipynb` in Jupyter and run all cells top-to-bottom.
 
 ## 6. Key Findings
 
-> *(To be completed after evaluation — see `evaluation/test_results.md`)*
-
-- Chunking strategy comparison: fixed-size vs. sentence-aware splitting
-- Retrieval accuracy across factual, inference, out-of-scope, and specificity queries
-- Prompt iteration results and measurable improvements
+- **Chunking:** Paragraph-aware chunking (26 chunks, avg 866 chars) outperformed fixed-size (64 chunks, avg 377 chars) by preserving semantic units from resume and SOQ sections
+- **Evaluation:** Average quality score 4.2/5 across 10 test questions; 0 hallucinations; all 3 out-of-scope questions correctly refused
+- **Prompt engineering:** Each iteration improved output quality — adding grounding reduced hallucination risk; adding tone/format guidance produced recruiter-appropriate responses
+- **Failure patterns:** Factual retrieval missed degree information (Q1, score 2/5) because degree details were embedded in header sections; language coverage was incomplete (Q2, score 3/5) due to skills being spread across multiple chunks — increasing k from 3 to 5 would address both
 
 ---
 

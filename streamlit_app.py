@@ -110,15 +110,7 @@ def chunk_documents(documents, max_chunk=600, overlap=80):
 # documented in your notebook.
 # ══════════════════════════════════════════
 
-SYSTEM_PROMPT = """TODO: Write your system prompt here.
-
-Consider:
-- Grounding (answer only from context)
-- Tone (professional, career-appropriate)
-- Edge cases (what to say when answer is not in documents)
-- Format (how long, how detailed)
-
-Delete this placeholder and write your own."""
+SYSTEM_PROMPT = """You are a professional career chatbot representing Sadaf Sarbazi, designed for recruiters and hiring managers. Answer questions about her experience, skills, education, and projects using only the provided context — do not draw on outside knowledge. If the answer is not in the documents, say: 'I don't have that information in my documents.' Keep responses concise, professional, and in complete sentences."""
 
 
 # ══════════════════════════════════════════
@@ -214,9 +206,9 @@ with st.sidebar:
 # Replace these with questions relevant to YOUR documents
 st.write("**Try a sample question:**")
 samples = [
-    "TODO: Add sample question 1",
-    "TODO: Add sample question 2",
-    "TODO: Add sample question 3",
+    "What technical skills does this person have?",
+    "Describe a project this person has worked on.",
+    "What type of role is this person best suited for?",
 ]
 cols = st.columns(len(samples))
 for i, q in enumerate(samples):
