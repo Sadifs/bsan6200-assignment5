@@ -1,70 +1,114 @@
 Sadaf Sarbazi
 Email: ssarbazi@lion.lmu.edu
+LinkedIn: linkedin.com/in/sadaf-sarbazi
 GitHub: github.com/Sadifs
+Location: Los Angeles, CA
 
 ---
 
-PROFILE
+PROFESSIONAL SUMMARY
 
-Sadaf Sarbazi is a data and analytics professional with a dual graduate background in environmental science and business analytics. She holds a Master of Environmental Science (MEnvSc) from the University of Toronto (2023) and is completing an M.S. in Business Analytics at Loyola Marymount University. Her work sits at the intersection of data science, climate, environmental policy, and public health — combining rigorous quantitative methods with deep domain knowledge built through graduate-level environmental science training.
+Analytics and policy professional with dual master's degrees in Environmental Science and Business Analytics, and professional experience in regulatory compliance analysis, emissions modeling, and executive reporting. Trained in climate and energy regulatory frameworks including carbon pricing, cap-and-trade, and integrated resource planning. Currently building AI-powered data systems for Cedars-Sinai Health System and completing an MSBA at Loyola Marymount University (GPA: 3.74, expected August 2026). Skilled in translating complex environmental and operational data into executive-ready recommendations that support risk management, performance optimization, and long-term value creation.
 
 ---
 
 ENVIRONMENTAL SCIENCE & SUSTAINABILITY BACKGROUND
 
-Sadaf Sarbazi completed a Master of Environmental Science (MEnvSc) at the University of Toronto in 2023. Her graduate training covered environmental systems, sustainability policy, climate governance, and environmental health. She also holds a Certificate in Sustainability from UofT and an Honors Bachelor of Science (H.B.Sc.) with a focus on environmental and health-related disciplines — giving her a full scientific foundation from undergrad through graduate school.
+Sadaf Sarbazi holds a Master of Environmental Science (MEnvSc), Terrestrial & Aquatic Systems, from the University of Toronto (2024). Her graduate training covered climate change policy (carbon pricing, cap-and-trade, renewable portfolio standards, energy transition frameworks), environmental legislation and policy, environmental regulations, conservation policy, and environmental project management — all completed with A or A+ grades. She also holds a Certificate in Sustainability from UofT and an Honours Bachelor of Science (HBSc) in Human Biology & Environment and Health from the University of Toronto (2023).
 
-Her MEnvSc background directly shapes her data science work. She applies climate and environmental domain knowledge to technical problems: her Paris Agreement Tracker project used machine learning on GHG emissions data to predict whether countries are aligned with climate targets, drawing directly on her understanding of climate policy frameworks and the UNFCCC process. She is seeking roles that sit at the intersection of data, environment, sustainability, and policy.
+Her MEnvSc training directly shapes her data science work. She applies environmental and climate domain knowledge to technical problems — her Paris Agreement Tracker project used machine learning on GHG emissions data to predict whether countries are aligned with climate targets, drawing on her understanding of climate policy frameworks and the UNFCCC process. Her professional experience at Marsa Ocean Shipping involved researching IMO MARPOL Annex VI emissions regulations and translating compliance requirements into operational data systems.
 
 ---
 
 EDUCATION
 
-Master of Environmental Science (MEnvSc)
-University of Toronto (UofT) | 2023
-Graduate training in environmental systems, sustainability, climate governance, and environmental policy. Thesis-level engagement with real environmental data and policy frameworks.
+Master of Science, Business Analytics (MSBA) — GPA: 3.74
+Loyola Marymount University (LMU), Los Angeles, CA | Expected August 2026
+Coursework: Data Modeling and Decision Analytics, Machine Learning, GIS and Data Visualization, Text Mining and Social Media Analytics, Time-Series Modeling, Sentiment Analysis, Unsupervised Learning and Clustering, Strategic Analytics.
+MSBA Academic Scholarship recipient (2025).
 
-Master of Science, Business Analytics (M.S.)
-Loyola Marymount University (LMU) | Expected 2026
-Coursework: Text Mining & Social Media Analytics, Machine Learning, Exploratory Data Analysis, Time-Series Modeling, Sentiment Analysis, Unsupervised Learning & Clustering.
+Master of Environmental Science (MEnvSc), Terrestrial & Aquatic Systems
+University of Toronto (UofT), Toronto, ON | 2024
+Coursework: Climate Change Policy, Environmental Legislation and Policy, Environmental Regulations, Conservation Policy, Environmental Project Management, Ontario Environmental Policy. All policy courses completed with A or A+ grades.
+Mary Winthrop Allen Graduate Scholarship recipient (2023).
 
 Certificate in Sustainability
-University of Toronto (UofT)
-Completed during undergraduate studies — sustainability frameworks, environmental governance, and systems thinking.
+University of Toronto (UofT) | 2023
 
-Honors Bachelor of Science (H.B.Sc.)
-University of Toronto (UofT)
-Science foundation with a focus on environmental and health-related disciplines.
+Honours Bachelor of Science (HBSc), Human Biology & Environment and Health
+University of Toronto (UofT), Toronto, ON | 2023
+Coursework: International Environmental Policy, Ontario Environmental Policy, Sustainability Thinking, Environment and Health, Current Environmental Topics, Statistics I, Effective Writing (A+).
+
+---
+
+PROFESSIONAL EXPERIENCE
+
+Graduate Data Analyst — Cedars-Sinai Health System
+Los Angeles, CA | May 2026 – August 2026
+- Building and validating an AI system that generates plain-language hospital bill explanations, surfaces relevant financial resources, and prepares patients with talking points for discussions with healthcare providers and insurers.
+- Applying machine learning and natural language processing to patient-level financial data from multiple organizational systems, with NDA compliance and data governance protocols throughout.
+- Participating in structured weekly client meetings with Cedars-Sinai administrators and clinical staff to align on deliverables.
+- Presenting final recommendations at a formal poster session to health system leadership in August 2026.
+
+Sustainability Analyst — Marsa Ocean Shipping LLC
+Remote | May 2024 – May 2025
+- Researched IMO MARPOL Annex VI statutes, regulatory decisions, and emissions standards to assess compliance across a fleet of 5+ vessels and identify areas of regulatory risk.
+- Built trend analyses, financial models, and emissions models of fleet fuel consumption data to quantify the operational and cost impacts of energy efficiency regulations, with results informing C-suite investment decisions.
+- Designed Excel-based KPI dashboards for real-time emissions and financial performance monitoring; led a reporting process redesign that cut preparation time by 30% and was adopted across the organization.
+- Wrote quarterly compliance reports and policy briefings for senior leadership; coordinated data collection across operational teams in multiple jurisdictions to meet regulatory filing deadlines.
+
+---
+
+LEADERSHIP
+
+Graduate Program Liaison — College of Business Administration Graduate Student Association, LMU
+2025 – Present
+- Represent the MSBA cohort in faculty and administrative discussions.
+- Coordinate professional development and networking initiatives to strengthen student engagement and industry connections.
 
 ---
 
 TECHNICAL SKILLS
 
-Programming & Tools: Python (pandas, numpy, scikit-learn, matplotlib, seaborn, NLTK, SHAP), SQL, Jupyter Notebook, Google Colab, Power BI, Tableau, Streamlit.
+Programming & Tools: Python (pandas, numpy, scikit-learn, matplotlib, seaborn, NLTK, SHAP), SQL, SAS, Excel, Alteryx, Tableau, Tableau Prep Builder, Power BI, ArcGIS, Streamlit, Jupyter Notebook, Google Colab.
 
-Machine Learning & Analytics: Supervised Learning (classification, regression, ensemble methods), Unsupervised Learning (clustering, dimensionality reduction), Natural Language Processing, Sentiment Analysis, Time-Series Modeling, Exploratory Data Analysis, Model Explainability (SHAP), Retrieval-Augmented Generation (RAG).
+Machine Learning & Analytics: Supervised Learning (classification, regression, ensemble methods), Unsupervised Learning (clustering, dimensionality reduction), Natural Language Processing, Sentiment Analysis, Time-Series Modeling, Exploratory Data Analysis, Model Explainability (SHAP), Retrieval-Augmented Generation (RAG), GIS and Spatial Analytics.
 
-Domain Knowledge: Environmental science and sustainability, climate policy and governance, public health data and indicators, GHG emissions analysis, climate target tracking.
+Domain Expertise: Energy and Climate Policy, Integrated Resource Planning (IRP), Regulatory Compliance and Analysis, Emissions Modeling, ESG Analytics, Carbon Pricing and Cap-and-Trade, Quantitative and Financial Modeling, Trend Analysis, KPI Dashboard Development, Executive Reporting, Risk Assessment.
+
+Languages: English (Fluent), Farsi (Native).
+
+---
+
+AWARDS & SCHOLARSHIPS
+
+- MSBA Academic Scholarship — Loyola Marymount University (2025)
+- Mary Winthrop Allen Graduate Scholarship — University of Toronto (2023)
+- Certificate in Sustainability — University of Toronto (2023)
 
 ---
 
 PROJECTS
 
-Paris Agreement Tracker (BSAN 6070 Final Project)
-Built a machine learning classifier predicting whether countries align with Paris Agreement climate targets using GHG emissions data from 1950 to 2024 across 39 major emitters. Compared Logistic Regression (0.900 ROC-AUC), Gradient Boosting (0.885 ROC-AUC), and Random Forest; selected Random Forest after GridSearchCV: 0.933 ROC-AUC, 84.6% accuracy. Key finding: nearly all on-track countries are lower-income nations with low per-capita emissions. Built a live Streamlit dashboard with global mapping, SHAP explainability, and interactive prediction tools. This project directly applies MEnvSc domain knowledge to a real climate policy question.
+Paris Agreement Tracker — BSAN 6070 Final Project
+Built a machine learning classifier predicting whether countries align with Paris Agreement climate targets using GHG emissions data from 1950–2024 across 39 major emitters. Engineered 8 predictive features from emissions time series including recent per-capita emissions, post-Paris trajectory changes, and year-on-year decline ratios. Compared Logistic Regression (0.900 ROC-AUC), Gradient Boosting (0.885 ROC-AUC), and Random Forest; selected Random Forest after GridSearchCV: 0.933 ROC-AUC, 84.6% accuracy. Key finding: nearly all on-track countries are lower-income nations with low per-capita emissions. Built a live Streamlit dashboard with global mapping, country-level analysis, SHAP explainability, and interactive prediction tools. Validated against Climate Action Tracker ratings. This project directly applies MEnvSc domain knowledge to a real climate policy question.
 GitHub: github.com/Sadifs/BSAN6070-Final
 
-Ask My Resume — RAG Chatbot (BSAN 6200 Final Project)
+Ask My Resume — RAG Chatbot — BSAN 6200 Final Project
 Built a Retrieval-Augmented Generation chatbot answering recruiter questions about professional background. Pipeline: sentence-transformers embeddings, cosine similarity retrieval, Qwen/Qwen2.5-7B-Instruct via HuggingFace API. Achieved 4.2/5 average quality score across 10 evaluation questions with zero hallucinations. Deployed on Streamlit Cloud.
 GitHub: github.com/Sadifs/bsan6200-assignment5
 
-Naive Bayes Sentiment Analysis Pipeline
-Text classification pipeline for sentiment analysis using Naive Bayes. Applied NLP preprocessing: tokenization, stopword removal, TF-IDF vectorization. Evaluated on benchmark datasets for accuracy and F1 score.
+Text Analytics Coursework — BSAN 6200
+NLP pipelines, sentiment analysis, language model evaluation, and social media data analysis. Includes collaborative assignments in text classification and NLP preprocessing co-authored with a classmate.
+
+Machine Learning Coursework — BSAN 6070
+Supervised and unsupervised learning, feature engineering, data preprocessing, model training and evaluation, and business-focused interpretation of ML models.
+GitHub: github.com/Sadifs/machine-learning-spring-2026
 
 ---
 
 TARGET ROLES & INTERESTS
 
-Sadaf is seeking roles at the intersection of data science, environmental sustainability, climate, and public health — including environmental data analyst, climate analytics, sustainability and ESG data roles, public health analytics, and data science positions in mission-driven organizations such as environmental NGOs, government agencies, research institutes, and impact-focused technology companies.
+Seeking roles at the intersection of data science, environmental sustainability, climate, public health, and policy — including environmental data analyst, climate analytics, ESG and sustainability data roles, energy policy analysis, public health analytics, and data science positions in mission-driven organizations such as environmental NGOs, government agencies, research institutes, utilities, and impact-focused technology companies.
 
-Her core strength is combining rigorous quantitative methods with deep domain expertise in environmental science and policy, allowing her to bridge technical teams and policy-facing stakeholders in ways that pure data scientists without environmental training cannot.
+Core strength: combining rigorous quantitative methods with deep domain expertise in environmental science, climate policy, and regulatory frameworks — able to bridge technical teams and policy-facing stakeholders in ways that pure data scientists without environmental training cannot.
