@@ -67,11 +67,11 @@
 
 ---
 
-### Entry 8 — [Date] *(Case where my approach beat AI suggestion)*
-**Tool:** [Tool]
-**Prompt:** [What you asked]
-**AI Suggestion:** [What it suggested]
-**What I Used:** [Your approach instead]
-**Why My Approach Was Better:** [Explain the measurable difference]
+### Entry 8 — 2026-05-04 *(Case where my approach beat AI suggestion)*
+**Tool:** Claude Code
+**Prompt:** What LLM should I use for the HuggingFace Inference API free path?
+**AI Suggestion:** HuggingFaceH4/zephyr-7b-beta (from starter code)
+**What I Used:** Qwen/Qwen2.5-7B-Instruct
+**Why My Approach Was Better:** Zephyr returned a 400 Bad Request error ("not supported by any provider you have enabled") immediately — the AI's suggestion was non-functional on my account's free tier. I tested Qwen/Qwen2.5-7B-Instruct as an alternative and it worked correctly on the first attempt, returning grounded, well-formed answers. The measurable difference: zephyr produced zero usable outputs; Qwen powered the entire evaluation set of 10 questions with an average score of 4.2/5. The AI defaulted to the starter code recommendation without accounting for provider availability — my approach of testing an alternative directly was faster and more effective.
 
 ---
