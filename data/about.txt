@@ -66,8 +66,7 @@ PROFESSIONAL EXPERIENCE
 Graduate Data Analyst — Cedars-Sinai Health System
 Los Angeles, CA | May 2026 – August 2026
 - Building and validating an AI system that generates plain-language hospital bill explanations, surfaces relevant financial resources, and prepares patients with talking points for discussions with healthcare providers and insurers.
-- Applying machine learning and natural language processing to patient-level financial data from multiple organizational systems, with NDA compliance and data governance protocols throughout.
-- Participating in structured weekly client meetings with Cedars-Sinai administrators and clinical staff to align on deliverables.
+- Participating in client meetings with Cedars-Sinai administrators and staff to align on deliverables.
 - Presenting final recommendations at a formal poster session to health system leadership in August 2026.
 
 Sustainability Analyst — Marsa Ocean Shipping LLC
