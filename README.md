@@ -54,7 +54,7 @@ Open `notebooks/rag_pipeline.ipynb` in Jupyter and run all cells top-to-bottom.
 |---|---|
 | LLM | Qwen/Qwen2.5-7B-Instruct (via HuggingFace Inference API) |
 | Embeddings | sentence-transformers/all-MiniLM-L6-v2 (local, free) |
-| Vector Store | ChromaDB |
+| Vector Store | NumPy cosine similarity |
 | UI | Streamlit |
 | Document Loader | PyPDF |
 
@@ -91,6 +91,8 @@ Open `notebooks/rag_pipeline.ipynb` in Jupyter and run all cells top-to-bottom.
 
 ---
 
-## 8. Repository
+## 8. Live Demo & Repository
 
-[github.com/Sadifs/bsan6200-assignment5](https://github.com/Sadifs/bsan6200-assignment5)
+**Live app:** [bsan6200-assignment5-ragchatbot.streamlit.app](https://bsan6200-assignment5-ragchatbot.streamlit.app)
+
+**GitHub:** [github.com/Sadifs/bsan6200-assignment5](https://github.com/Sadifs/bsan6200-assignment5)

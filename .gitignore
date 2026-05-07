@@ -44,3 +44,5 @@ data/*.pdf
 data/*.docx
 data/*.txt
 data/*.md
+# Public career summary committed intentionally
+!data/about.txt

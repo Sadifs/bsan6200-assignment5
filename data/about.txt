@@ -1,0 +1,81 @@
+Sadaf Sarbazi
+Email: ssarbazi@lion.lmu.edu
+GitHub: github.com/Sadifs
+
+---
+
+PROFILE
+
+Data and analytics professional at the intersection of environmental science, public health, and data-driven decision-making. Holds a dual graduate background spanning environmental science and business analytics, with experience applying machine learning, NLP, and statistical modeling to complex, real-world problems. Passionate about using data and AI to address environmental, health, and policy challenges.
+
+---
+
+EDUCATION
+
+Master of Science, Business Analytics (M.S.)
+Loyola Marymount University (LMU) | Expected 2026
+Relevant coursework: Text Mining & Social Media Analytics, Machine Learning, Exploratory Data Analysis, Time-Series Modeling, Sentiment Analysis, Unsupervised Learning & Clustering
+
+Master of Environmental Science (MEnvSc)
+University of Toronto (UofT)
+Focused on environmental systems, policy, and sustainability — providing the domain foundation for applying data science to environmental and public health problems.
+
+---
+
+TECHNICAL SKILLS
+
+Programming & Tools:
+- Python (pandas, numpy, scikit-learn, matplotlib, seaborn, NLTK)
+- SQL
+- Jupyter Notebook, Google Colab
+- Power BI, Tableau
+- Streamlit
+
+Machine Learning & Analytics:
+- Supervised Learning (classification, regression)
+- Unsupervised Learning (clustering, dimensionality reduction)
+- Natural Language Processing & Sentiment Analysis
+- Time-Series Modeling
+- Exploratory Data Analysis (EDA)
+- Retrieval-Augmented Generation (RAG)
+
+Domain Knowledge:
+- Environmental science and sustainability
+- Environmental policy and governance
+- Public health data and indicators
+- Climate data analysis
+
+---
+
+PROJECTS
+
+Paris Agreement Climate Classifier (BSAN 6070 Final Project)
+- Built a machine learning classifier to categorize climate policy documents in relation to the Paris Agreement
+- Compared multiple algorithms; selected Random Forest for best performance: 0.933 ROC-AUC, 84.6% accuracy
+- Applied feature engineering, cross-validation, and model interpretability techniques
+- Directly draws on environmental policy domain knowledge from MEnvSc background
+- GitHub: github.com/Sadifs/machine-learning-spring-2026
+
+Ask My Resume — RAG Chatbot (BSAN 6200 Final Project)
+- Built a Retrieval-Augmented Generation chatbot answering recruiter questions about professional background
+- Pipeline: sentence-transformers embeddings + cosine similarity retrieval + Qwen/Qwen2.5-7B-Instruct (HuggingFace API)
+- Achieved 4.2/5 average quality score across 10 evaluation questions; zero hallucinations recorded
+- Deployed on Streamlit Cloud: bsan6200-assignment5-ragchatbot.streamlit.app
+- GitHub: github.com/Sadifs/bsan6200-assignment5
+
+Naive Bayes Sentiment Analysis Pipeline
+- Developed a text classification pipeline for sentiment analysis using Naive Bayes
+- Applied NLP preprocessing: tokenization, stopword removal, TF-IDF vectorization
+- Evaluated on benchmark datasets for accuracy and F1 score
+
+---
+
+TARGET ROLES & INTERESTS
+
+Seeking roles at the intersection of data science, environmental sustainability, public health, and policy — including:
+- Environmental data analyst / sustainability analytics
+- Climate and ESG data roles
+- Public health analytics
+- Data science roles in mission-driven organizations (environmental NGOs, government agencies, think tanks, impact-focused tech)
+
+Core strength: combining rigorous quantitative methods with deep domain knowledge in environmental science and policy — able to work across technical and policy-facing teams.
