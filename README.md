@@ -12,13 +12,21 @@
 
 ---
 
-## 2. Project Description
+## 2. Author
+
+**Sadaf Sarbazi**
+Email: ssarbazi@lion.lmu.edu
+GitHub: [github.com/Sadifs](https://github.com/Sadifs)
+
+---
+
+## 3. Project Description
 
 A Retrieval-Augmented Generation (RAG) chatbot that answers questions about my professional background using personal career documents (resume, CV, statement of qualifications, and project write-ups). Users can ask natural-language questions like "What is this person's environmental science background?" and receive grounded, accurate answers pulled directly from source documents. Deployed live on Streamlit Cloud.
 
 ---
 
-## 3. Setup Instructions
+## 4. Setup Instructions
 
 ### Prerequisites
 - Python 3.10+
@@ -48,7 +56,7 @@ Open `notebooks/rag_pipeline.ipynb` in Jupyter and run all cells top-to-bottom.
 
 ---
 
-## 4. Models & Tools Used
+## 5. Models & Tools Used
 
 | Component | Tool / Model |
 |---|---|
@@ -60,14 +68,14 @@ Open `notebooks/rag_pipeline.ipynb` in Jupyter and run all cells top-to-bottom.
 
 ---
 
-## 5. Paid vs. Free Path
+## 6. Paid vs. Free Path
 
 - **Free path used:** HuggingFace Inference API (free tier) for LLM; `sentence-transformers` for local embeddings — no credit card required
 - **Paid alternative:** Replace with OpenAI `gpt-4o-mini` + `text-embedding-3-small` for higher throughput and quality
 
 ---
 
-## 6. Key Findings
+## 7. Key Findings
 
 - **Chunking:** Paragraph-aware chunking (26 chunks, avg 866 chars) outperformed fixed-size (64 chunks, avg 377 chars) by preserving semantic units from resume and SOQ sections
 - **Evaluation:** Average quality score 4.2/5 across 10 test questions; 0 hallucinations; all 3 out-of-scope questions correctly refused
@@ -76,7 +84,7 @@ Open `notebooks/rag_pipeline.ipynb` in Jupyter and run all cells top-to-bottom.
 
 ---
 
-## 7. File Descriptions
+## 8. File Descriptions
 
 | File / Folder | Description |
 |---|---|
@@ -92,7 +100,7 @@ Open `notebooks/rag_pipeline.ipynb` in Jupyter and run all cells top-to-bottom.
 
 ---
 
-## 8. Live Demo & Repository
+## 9. Live Demo & Repository
 
 **Live app:** [bsan6200-assignment5-ragchatbot.streamlit.app](https://bsan6200-assignment5-ragchatbot.streamlit.app)
 
