@@ -12,6 +12,18 @@ Analytics and policy professional with dual master's degrees in Environmental Sc
 
 ---
 
+DEGREES HELD (COMPLETE LIST)
+
+Sadaf Sarbazi holds FOUR credentials, all distinct:
+1. Master of Science, Business Analytics (MSBA) — Loyola Marymount University (LMU), Los Angeles, CA | In progress, expected August 2026 | GPA: 3.74
+2. Master of Environmental Science (MEnvSc), specialization: Terrestrial & Aquatic Systems — University of Toronto (UofT), Toronto, ON | Completed 2024
+3. Certificate in Sustainability — University of Toronto (UofT), Toronto, ON | Completed 2023
+4. Honours Bachelor of Science (HBSc), field: Human Biology & Environment and Health — University of Toronto (UofT), Toronto, ON | Completed 2023
+
+IMPORTANT: The MEnvSc (graduate degree, 2024, specialization Terrestrial & Aquatic Systems) and the HBSc (undergraduate degree, 2023, field Human Biology & Environment and Health) are TWO SEPARATE degrees from UofT. They are not the same credential.
+
+---
+
 ENVIRONMENTAL SCIENCE & SUSTAINABILITY BACKGROUND
 
 Sadaf Sarbazi holds a Master of Environmental Science (MEnvSc), Terrestrial & Aquatic Systems, from the University of Toronto (2024). Her graduate training covered climate change policy (carbon pricing, cap-and-trade, renewable portfolio standards, energy transition frameworks), environmental legislation and policy, environmental regulations, conservation policy, and environmental project management — all completed with A or A+ grades. She also holds a Certificate in Sustainability from UofT and an Honours Bachelor of Science (HBSc) in Human Biology & Environment and Health from the University of Toronto (2023).
@@ -23,20 +35,28 @@ Her MEnvSc training directly shapes her data science work. She applies environme
 EDUCATION
 
 Master of Science, Business Analytics (MSBA) — GPA: 3.74
-Loyola Marymount University (LMU), Los Angeles, CA | Expected August 2026
+Loyola Marymount University (LMU), Los Angeles, CA | In progress, expected August 2026
 Coursework: Data Modeling and Decision Analytics, Machine Learning, GIS and Data Visualization, Text Mining and Social Media Analytics, Time-Series Modeling, Sentiment Analysis, Unsupervised Learning and Clustering, Strategic Analytics.
 MSBA Academic Scholarship recipient (2025).
 
-Master of Environmental Science (MEnvSc), Terrestrial & Aquatic Systems
-University of Toronto (UofT), Toronto, ON | 2024
+---
+
+Master of Environmental Science (MEnvSc), specialization: Terrestrial & Aquatic Systems
+University of Toronto (UofT), Toronto, ON | Completed 2024
+This is a graduate-level master's degree in environmental science. It is a separate credential from the undergraduate HBSc below.
 Coursework: Climate Change Policy, Environmental Legislation and Policy, Environmental Regulations, Conservation Policy, Environmental Project Management, Ontario Environmental Policy. All policy courses completed with A or A+ grades.
 Mary Winthrop Allen Graduate Scholarship recipient (2023).
 
-Certificate in Sustainability
-University of Toronto (UofT) | 2023
+---
 
-Honours Bachelor of Science (HBSc), Human Biology & Environment and Health
-University of Toronto (UofT), Toronto, ON | 2023
+Certificate in Sustainability
+University of Toronto (UofT), Toronto, ON | Completed 2023
+
+---
+
+Honours Bachelor of Science (HBSc), field: Human Biology & Environment and Health
+University of Toronto (UofT), Toronto, ON | Completed 2023
+This is an undergraduate degree. It is a separate credential from the graduate MEnvSc above.
 Coursework: International Environmental Policy, Ontario Environmental Policy, Sustainability Thinking, Environment and Health, Current Environmental Topics, Statistics I, Effective Writing (A+).
 
 ---
