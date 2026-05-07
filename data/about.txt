@@ -6,7 +6,7 @@ GitHub: github.com/Sadifs
 
 PROFILE
 
-Data and analytics professional at the intersection of environmental science, public health, and data-driven decision-making. Holds a dual graduate background spanning environmental science and business analytics, with experience applying machine learning, NLP, and statistical modeling to complex, real-world problems. Passionate about using data and AI to address environmental, health, and policy challenges.
+Data and analytics professional at the intersection of environmental science, public health, and data-driven decision-making. Holds a dual graduate background in environmental science and business analytics, with an undergraduate foundation in science and sustainability. Experienced in applying machine learning, NLP, and statistical modeling to complex real-world problems — particularly in climate, environment, and health. Passionate about using data and AI to inform environmental and public policy.
 
 ---
 
@@ -17,44 +17,54 @@ Loyola Marymount University (LMU) | Expected 2026
 Relevant coursework: Text Mining & Social Media Analytics, Machine Learning, Exploratory Data Analysis, Time-Series Modeling, Sentiment Analysis, Unsupervised Learning & Clustering
 
 Master of Environmental Science (MEnvSc)
+University of Toronto (UofT) | 2023
+Focused on environmental systems, sustainability, and policy — providing deep domain knowledge for applying data science to environmental and public health challenges.
+
+Certificate in Sustainability
 University of Toronto (UofT)
-Focused on environmental systems, policy, and sustainability — providing the domain foundation for applying data science to environmental and public health problems.
+Completed during undergraduate studies, covering sustainability frameworks, environmental governance, and systems thinking.
+
+Honors Bachelor of Science (H.B.Sc.)
+University of Toronto (UofT)
+Undergraduate foundation in science with a focus on environmental and health-related disciplines.
 
 ---
 
 TECHNICAL SKILLS
 
 Programming & Tools:
-- Python (pandas, numpy, scikit-learn, matplotlib, seaborn, NLTK)
+- Python (pandas, numpy, scikit-learn, matplotlib, seaborn, NLTK, SHAP)
 - SQL
 - Jupyter Notebook, Google Colab
 - Power BI, Tableau
 - Streamlit
 
 Machine Learning & Analytics:
-- Supervised Learning (classification, regression)
+- Supervised Learning (classification, regression, ensemble methods)
 - Unsupervised Learning (clustering, dimensionality reduction)
 - Natural Language Processing & Sentiment Analysis
 - Time-Series Modeling
 - Exploratory Data Analysis (EDA)
+- Model explainability (SHAP)
 - Retrieval-Augmented Generation (RAG)
 
 Domain Knowledge:
 - Environmental science and sustainability
-- Environmental policy and governance
+- Climate policy and governance
 - Public health data and indicators
-- Climate data analysis
+- Emissions data analysis and climate target tracking
 
 ---
 
 PROJECTS
 
-Paris Agreement Climate Classifier (BSAN 6070 Final Project)
-- Built a machine learning classifier to categorize climate policy documents in relation to the Paris Agreement
-- Compared multiple algorithms; selected Random Forest for best performance: 0.933 ROC-AUC, 84.6% accuracy
-- Applied feature engineering, cross-validation, and model interpretability techniques
-- Directly draws on environmental policy domain knowledge from MEnvSc background
-- GitHub: github.com/Sadifs/machine-learning-spring-2026
+Paris Agreement Tracker (BSAN 6070 Final Project)
+- Built a machine learning classifier predicting whether countries align with Paris Agreement climate targets using GHG emissions data from 1950–2024 across 39 major emitters
+- Compared Logistic Regression (0.900 ROC-AUC), Gradient Boosting (0.885 ROC-AUC), and Random Forest; selected Random Forest after GridSearchCV optimization: 0.933 ROC-AUC, 84.6% accuracy
+- Key finding: almost all on-track countries are lower-income nations with low per-capita emissions — validated against Climate Action Tracker ratings
+- Built a live Streamlit dashboard with global mapping, country-level analysis, SHAP explainability, and interactive prediction tools
+- Directly applies MEnvSc domain knowledge to a real climate policy question
+- GitHub: github.com/Sadifs/BSAN6070-Final
 
 Ask My Resume — RAG Chatbot (BSAN 6200 Final Project)
 - Built a Retrieval-Augmented Generation chatbot answering recruiter questions about professional background
@@ -72,10 +82,10 @@ Naive Bayes Sentiment Analysis Pipeline
 
 TARGET ROLES & INTERESTS
 
-Seeking roles at the intersection of data science, environmental sustainability, public health, and policy — including:
-- Environmental data analyst / sustainability analytics
-- Climate and ESG data roles
+Seeking roles at the intersection of data science, environmental sustainability, climate, public health, and policy — including:
+- Environmental data analyst / climate analytics
+- Sustainability and ESG data roles
 - Public health analytics
-- Data science roles in mission-driven organizations (environmental NGOs, government agencies, think tanks, impact-focused tech)
+- Data science in mission-driven organizations (environmental NGOs, government agencies, research institutes, impact-focused tech)
 
-Core strength: combining rigorous quantitative methods with deep domain knowledge in environmental science and policy — able to work across technical and policy-facing teams.
+Core strength: combining rigorous quantitative methods with deep domain expertise in environmental science and policy — able to bridge technical teams and policy-facing stakeholders.
